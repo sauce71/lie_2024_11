@@ -24,13 +24,13 @@ Kursholder: Tom Øyvind Hogstad - tom.oyvind.hogstad@gmail.com
 ### Andre lenker
 [Makerspace på Skogmo VGS](https://makerspaceskien.no/) ([Facebook](https://www.facebook.com/groups/makerspaceatskogmo/))
 
-[Annet](https://github.com/sauce71/lie_2024/blob/main/annet.md)
+[Annet](https://github.com/sauce71/lie_2024_11/blob/main/annet.md)
 
 ## Raspberry Pi Pico W pinout
 ![Raspberry Pi Pico Pinout](https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg)
 
 ## AHT20 og BMP280 sensorer
-![AHT20 + BMP280](https://raw.githubusercontent.com/sauce71/lie_2024/main/images/AHT20-BMP280.jpg)
+![AHT20 + BMP280](https://raw.githubusercontent.com/sauce71/lie_2024_11/main/images/AHT20-BMP280.jpg)
 
 ## AGS10 sensor
-![AGS10](https://raw.githubusercontent.com/sauce71/lie_2024/main/images/AGS10.jpg)
+![AGS10](https://raw.githubusercontent.com/sauce71/lie_2024_11/main/images/AGS10.jpg)
