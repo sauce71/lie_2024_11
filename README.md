@@ -1,4 +1,4 @@
-# Elektronikkurs - Bydelshuset på Lie - Vår 2024
+# Elektronikkurs - Bydelshuset på Lie - Høst 2024
 Kursholder: Tom Øyvind Hogstad - tom.oyvind.hogstad@gmail.com
 ### Programvare
 [Thonny, Python IDE for beginners](https://thonny.org/)
