@@ -2,7 +2,7 @@
 Om en ønsker å lære litt mer, så er kit fra Freenove å anbefale.
 Disse har tilgjengelig en ok bok, som en kan følge og lære om alle komponentene.
 
-[Freenove Ultimate Starter Kit for Raspberry Pi Pico](https://store.freenove.com/products/fnk0058)
+[Freenove Ultimate Starter Kit for Raspberry Pi Pico](https://store.freenove.com/products/fnk0058) [Tutorial](https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_Raspberry_Pi_Pico/tree/master/Python)
 
 Det er også et basis komponent kit som kommer i mange varianter fra mange leverandører.
 [sensor kit](https://www.aliexpress.com/w/wholesale-sensor-kit.html)
