@@ -73,7 +73,8 @@ print(r.status_code)
 print(r.text)
 
 
-# Regnearket vi sender til: https://docs.google.com/spreadsheets/d/1zCHBa8qPJou_Re_w0qSUycRHiH9nTD0K880WKd4RQOo/edit?usp=sharing
+# Regnearket vi sender til: 
+# https://docs.google.com/spreadsheets/d/1zCHBa8qPJou_Re_w0qSUycRHiH9nTD0K880WKd4RQOo/edit?usp=sharing
 
 
 
