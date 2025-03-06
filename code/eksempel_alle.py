@@ -24,7 +24,7 @@ bmp280_data = bmp280_sensor.read_compensated_data() # Returnerer en tuple med de
 temperature_bmp280 = bmp280_data[0]
 pressure = bmp280_data[1]
 
-print('TVOC', tvoc, 'ppb')
+print('TVOC:', tvoc, 'ppb')
 print('Humidity', humidity, '%')
 print('Pressure', pressure, 'hPA')
 print('Temperature (AHT20)', temperature_aht20, 'C')
