@@ -1,5 +1,5 @@
 # Elektronikkurs - Bydelshuset på Lie - Vår 2025
-Kursholder: Tom Øyvind Hogstad - tom.oyvind.hogstad@gmail.com
+Kursholder: Tom Øyvind Hogstad (915 67 370) - tom.oyvind.hogstad@gmail.com
 ### Programvare
 [Thonny, Python IDE for beginners](https://thonny.org/)
 
