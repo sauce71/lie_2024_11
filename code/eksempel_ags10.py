@@ -8,7 +8,6 @@ i2c = machine.I2C(0, sda=machine.Pin(16), scl=machine.Pin(17), freq=10000)
 
 sensor = AGS10(i2c) # Instans av sensoren
 
-
 while True:
     tvoc = sensor.total_volatile_organic_compounds_ppb # Leser tvoc
     #resistance = sensor.resistance_kohm # Leser motstand

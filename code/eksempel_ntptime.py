@@ -29,7 +29,7 @@ lt = time.localtime()
 print(lt)
 
 # Setter sammen delene fra lt til en lesbar dato og tid
-print(f"Dato / tid: {lt[2]}.{lt[1]:02}.{lt[0]} {lt[3]}:{lt[4]:02}:{lt[5]:02}")
+print(f"Dato / tid: {lt[2]:02}.{lt[1]:02}.{lt[0]} {lt[3]}:{lt[4]:02}:{lt[5]:02}")
 
 
 

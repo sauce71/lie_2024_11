@@ -1,5 +1,6 @@
 import network
 import requests
+import time
 
 
 
@@ -17,7 +18,7 @@ import requests
 sta_if = network.WLAN(network.STA_IF) # Static interface
 sta_if.active(True) # Aktiverer netwerk
 
-sta_if.connect('kurs', 'kurs2024') # Kobler til wifi
+sta_if.connect('sidespeilet_2G', 'Tinnea010306') # Kobler til wifi
 
 while not sta_if.isconnected(): # Venter på at tilkoblingen er klar
     time.sleep(1)
