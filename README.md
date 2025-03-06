@@ -3,7 +3,7 @@ Kursholder: Tom Øyvind Hogstad - tom.oyvind.hogstad@gmail.com
 ### Programvare
 [Thonny, Python IDE for beginners](https://thonny.org/)
 
-[Wokwiki](https://wokwi.com/)
+[Wokwiki - World's most advanced ESP32 simulator](https://wokwi.com/)
 
 ### Dokumentasjon
 [Get Started with MicroPython on Raspberry Pi Pico](https://hackspace.raspberrypi.com/books/micropython-pico) (PDF Bok)
