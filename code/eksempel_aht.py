@@ -11,6 +11,7 @@ while True:
     if sensor.is_ready:
         temperature = sensor.temperature
         humidity = sensor.humidity
-    time.sleep(2)
+
     print('Temperatur:', temperature, 'Luftfuktighet:', humidity)
+    time.sleep(2)
 

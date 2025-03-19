@@ -20,12 +20,14 @@ sta_if.connect('kurs', 'kurs2024') # Kobler til wifi
 
 while not sta_if.isconnected(): # Venter på at tilkoblingen er klar
     time.sleep(1)
+
 print('\nNettverks konfigurasjon', sta_if.ifconfig()) # Printer nettverkskonfigurasjon
 
 ntptime.settime() # Henter dato tid fra en ntp server
 
 # Tid kommer ut i en tuple
 lt = time.localtime()
+
 print(lt)
 
 # Setter sammen delene fra lt til en lesbar dato og tid

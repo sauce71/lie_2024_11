@@ -9,6 +9,8 @@ sensor = BME280(i2c=i2c, address=0x77) # Instans av sensoren - kortet bruker adr
 
 while True:
     values = sensor.values # Henter alle verdiene BMP280 har ikke luftfuktighet, derfor er denne verdien 0
+    temp = values[0]
+    hum = values[1]
     altitude = sensor.altitude
-    print(altitude, values)
+    print(altitude, temp, hum)
     time.sleep(2)

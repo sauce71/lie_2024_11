@@ -17,9 +17,23 @@ while True:
     if sensor_aht.is_ready:
         temperature = sensor_aht.temperature
         humidity = sensor_aht.humidity
+        
     avg_temp = (values[0]+temperature)/2
+    
     # Bruker en f-string
-    s = f'Temperatur: {values[0]:.2f} {temperature:.2f} {avg_temp:.2f}'
-    print(s)
+    s = f'Temperatur: {avg_temp:.2f}C Luftfuktighet: {humidity:.2f}% Trykk: {values[1]}'
+    # print(s)
+    
+    sd = f'{avg_temp};{humidity};{values[1]}\n'
+    
+    with open('data.csv', 'a') as f:
+        f.write(sd)
+    
+    
+    print(sd)
+    
+    
+    
+    
     
     time.sleep(2)
