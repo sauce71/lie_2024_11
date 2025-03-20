@@ -31,7 +31,10 @@ aht20_sensor = AHT2x(i2c, crc=False) # Instans av sensoren
 
 bmp280_sensor = BME280(i2c=i2c, address=0x77) # Instans av sensoren - kortet bruker adresse 0x77/119 - det er ikke standard
 
+led = machine.Pin('LED', machine.Pin.OUT)
+
 while True:
+    led.on()
     tvoc = ags10_sensor.total_volatile_organic_compounds_ppb
 
     if aht20_sensor.is_ready:
@@ -58,6 +61,7 @@ while True:
     r = requests.post(THINGSPEAK_WRITE_URL, json = payload, headers = HTTP_HEADERS)
     gc.collect()
     print('Status code:', r.status_code, 'Response:', r.text)
+    led.off()
     time.sleep(60)
 
 
