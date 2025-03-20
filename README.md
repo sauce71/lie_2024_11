@@ -5,7 +5,9 @@ Kursholder: Tom Øyvind Hogstad (915 67 370) - tom.oyvind.hogstad@gmail.com
 
 [Wokwiki - World's most advanced ESP32 simulator](https://wokwi.com/)
 
-[Thibgspeak](https://thingspeak.mathworks.com/)
+[Thingspeak](https://thingspeak.mathworks.com/)
+
+[Anaconda Navigator](https://www.anaconda.com/products/navigator)
 
 ### Dokumentasjon
 [Get Started with MicroPython on Raspberry Pi Pico](https://hackspace.raspberrypi.com/books/micropython-pico) (PDF Bok)
