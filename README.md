@@ -9,6 +9,10 @@ Kursholder: Tom Øyvind Hogstad (915 67 370) - tom.oyvind.hogstad@gmail.com
 
 [Anaconda Navigator](https://www.anaconda.com/products/navigator)
 
+### Firmware
+[Firmware for Rapberry Pi Pico 2 W](https://micropython.org/download/RPI_PICO2_W/)
+
+
 ### Dokumentasjon
 [Get Started with MicroPython on Raspberry Pi Pico](https://hackspace.raspberrypi.com/books/micropython-pico) (PDF Bok)
 

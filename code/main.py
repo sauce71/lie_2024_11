@@ -10,13 +10,13 @@ from machine import WDT
 
 
 HTTP_HEADERS = {'Content-Type': 'application/json'}
-THINGSPEAK_WRITE_API_KEY = 'AUVPR1A986JMJ1AQ' # HER MÅ DERE BRUKE EGEN!!!
+THINGSPEAK_WRITE_API_KEY = 'G89RA43MZGMEQFBA' # HER MÅ DERE BRUKE EGEN!!!
 THINGSPEAK_WRITE_URL = f'http://api.thingspeak.com/update?api_key={THINGSPEAK_WRITE_API_KEY}'
 
 
 # Kobler til nett
-SSID = 'kurs'
-PASSWORD = 'kurs2024'
+SSID = 'sidespeilet_2G'
+PASSWORD = 'Tinnea010306'
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
