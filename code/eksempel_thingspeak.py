@@ -1,4 +1,5 @@
 import machine
+import gc
 import time
 import network
 import requests
@@ -7,13 +8,13 @@ from aht import AHT2x
 from bme280_float import BME280
 
 HTTP_HEADERS = {'Content-Type': 'application/json'}
-THINGSPEAK_WRITE_API_KEY = '95N5X02QHYLKI573' # HER MÅ DERE BRUKE EGEN!!!
+THINGSPEAK_WRITE_API_KEY = 'AUVPR1A986JMJ1AQ' # HER MÅ DERE BRUKE EGEN!!!
 THINGSPEAK_WRITE_URL = f'http://api.thingspeak.com/update?api_key={THINGSPEAK_WRITE_API_KEY}'
 
 
 # Kobler til nett
-SSID = 'sidespeilet_2G'
-PASSWORD = 'Tinnea010306'
+SSID = 'kurs'
+PASSWORD = 'kurs2024'
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
@@ -55,6 +56,7 @@ while True:
             'field5' : temperature_bmp280,
             }
     r = requests.post(THINGSPEAK_WRITE_URL, json = payload, headers = HTTP_HEADERS)
+    gc.collect()
     print('Status code:', r.status_code, 'Response:', r.text)
     time.sleep(60)
 
