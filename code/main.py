@@ -6,6 +6,8 @@ import requests
 from ags10 import AGS10
 from aht import AHT2x
 from bme280_float import BME280
+from machine import WDT
+
 
 HTTP_HEADERS = {'Content-Type': 'application/json'}
 THINGSPEAK_WRITE_API_KEY = 'AUVPR1A986JMJ1AQ' # HER MÅ DERE BRUKE EGEN!!!
@@ -32,6 +34,9 @@ aht20_sensor = AHT2x(i2c, crc=False) # Instans av sensoren
 bmp280_sensor = BME280(i2c=i2c, address=0x77) # Instans av sensoren - kortet bruker adresse 0x77/119 - det er ikke standard
 
 led = machine.Pin('LED', machine.Pin.OUT)
+
+wdt = WDT(timeout=8000)  # enable it with a timeout of 2s
+
 
 while True:
     led.on()
@@ -62,7 +67,9 @@ while True:
     gc.collect()
     print('Status code:', r.status_code, 'Response:', r.text)
     led.off()
-    time.sleep(60)
+    for i in range(60):
+        time.sleep(1)
+        wdt.feed()
 
 
 
