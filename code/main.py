@@ -17,8 +17,8 @@ THINGSPEAK_WRITE_URL = f'http://api.thingspeak.com/update?api_key={THINGSPEAK_WR
 
 
 # Kobler til nett
-SSID = 'sidespeilet_2G'
-PASSWORD = 'Tinnea010306'
+SSID = 'kurs'
+PASSWORD = 'kurs2024'
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(False) # Nettverket overlever en omstart
@@ -77,6 +77,7 @@ while True:
             'field4' : temperature_aht20,
             'field5' : temperature_bmp280,
             }
+    print(payload)
     try:
         r = requests.post(THINGSPEAK_WRITE_URL, json = payload, headers = HTTP_HEADERS)
     except Exception as e: # Here it catches any error.
