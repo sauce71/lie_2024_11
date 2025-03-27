@@ -8,6 +8,8 @@ from aht import AHT2x
 from bme280_float import BME280
 from machine import WDT
 
+led = machine.Pin('LED', machine.Pin.OUT)
+
 
 HTTP_HEADERS = {'Content-Type': 'application/json'}
 THINGSPEAK_WRITE_API_KEY = 'G89RA43MZGMEQFBA' # HER MÅ DERE BRUKE EGEN!!!
@@ -19,9 +21,23 @@ SSID = 'sidespeilet_2G'
 PASSWORD = 'Tinnea010306'
 
 sta_if = network.WLAN(network.STA_IF)
+sta_if.active(False) # Nettverket overlever en omstart
 sta_if.active(True)
 sta_if.connect(SSID, PASSWORD) # Kobler til wifi
-while not sta_if.isconnected(): time.sleep(1)
+
+wdt = WDT(timeout=8000)  # enable it with a timeout of 8s
+
+ret = 0
+print('Kobler til nett ', end='')
+while not sta_if.isconnected():
+    print('.', end='')
+    time.sleep(1)
+    ret += 1
+    wdt.feed()
+    led.toggle() # Blinker når den kobler til nett
+    if ret > 30: # Prøver i 60 sekunder. 
+        machine.reset() # Starter på nytt om ikke det er nett etter 30 sekunder
+led.off()
 print('\nNettverks konfigurasjon', sta_if.ifconfig()) # Printer nettverkskonfigurasjon
 
 # Setter opp i2c med en frekvens på 10khz
@@ -33,9 +49,7 @@ aht20_sensor = AHT2x(i2c, crc=False) # Instans av sensoren
 
 bmp280_sensor = BME280(i2c=i2c, address=0x77) # Instans av sensoren - kortet bruker adresse 0x77/119 - det er ikke standard
 
-led = machine.Pin('LED', machine.Pin.OUT)
 
-wdt = WDT(timeout=8000)  # enable it with a timeout of 2s
 
 
 while True:
@@ -63,26 +77,22 @@ while True:
             'field4' : temperature_aht20,
             'field5' : temperature_bmp280,
             }
-    r = requests.post(THINGSPEAK_WRITE_URL, json = payload, headers = HTTP_HEADERS)
+    try:
+        r = requests.post(THINGSPEAK_WRITE_URL, json = payload, headers = HTTP_HEADERS)
+    except Exception as e: # Here it catches any error.
+        print(e)
+        if isinstance(e, OSError) and r: # If the error is an OSError the socket has to be closed.
+            r.close()
+        machine.reset() # Starter på nytt om en får en Exception
+            
     gc.collect()
     print('Status code:', r.status_code, 'Response:', r.text)
     led.off()
     for i in range(60):
+        if not (i % 10):
+            led.on() # Blinker hvert 10 sekund
+            time.sleep(0.1)
+            led.off()
         time.sleep(1)
         wdt.feed()
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
+    r.close() # Lukker koblingen
