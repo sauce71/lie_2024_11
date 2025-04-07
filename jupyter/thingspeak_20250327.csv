@@ -1,4 +1,4 @@
-created_at,entry_id,field1,field2,field3,field4,field5,latitude,longitude,elevation,status
+created_at,entry_id,TVOC,Humidity,Pressure,Temperature (AHT20),Temperature (BMP280),latitude,longitude,elevation,status
 2025-03-20T19:04:09+01:00,1,643,23.74821,101824.1,25.15202,25.53575,,,,
 2025-03-20T19:05:09+01:00,2,726,23.64473,101827.9,25.10109,25.51355,,,,
 2025-03-20T19:06:10+01:00,3,581,23.76661,101828.8,25.07801,25.45455,,,,

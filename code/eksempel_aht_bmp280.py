@@ -22,15 +22,18 @@ while True:
     
     # Bruker en f-string
     s = f'Temperatur: {avg_temp:.2f}C Luftfuktighet: {humidity:.2f}% Trykk: {values[1]}'
-    # print(s)
+    print(s)
     
     sd = f'{avg_temp};{humidity};{values[1]}\n'
     
-    with open('data.csv', 'a') as f:
-        f.write(sd)
+    f = open('data.csv', 'a')
+    f.write(sd)
+    f.close()
+    
+    ##with open('data.csv', 'a') as f:
+    ##    f.write(sd)
     
     
-    print(sd)
     
     
     

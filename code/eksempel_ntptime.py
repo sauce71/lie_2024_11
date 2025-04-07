@@ -16,7 +16,7 @@ for n in networks:
     print('SSID:', str(n[0]), 'Kanal:', n[2], 'RSSI:', n[3])
 
 
-sta_if.connect('kurs', 'kurs2024') # Kobler til wifi
+sta_if.connect('DATO IOT', 'Admin:123') # Kobler til wifi
 
 while not sta_if.isconnected(): # Venter på at tilkoblingen er klar
     time.sleep(1)

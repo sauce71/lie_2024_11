@@ -12,5 +12,5 @@ while True:
     tvoc = sensor.total_volatile_organic_compounds_ppb # Leser tvoc
     #resistance = sensor.resistance_kohm # Leser motstand
     print('TVOC:', tvoc) # Skriver ut den avleste verdien
-    time.sleep(10) # Venter i x sekunder
+    time.sleep(2) # Venter i x sekunder
     

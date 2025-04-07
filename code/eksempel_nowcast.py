@@ -18,7 +18,7 @@ import time
 sta_if = network.WLAN(network.STA_IF) # Static interface
 sta_if.active(True) # Aktiverer netwerk
 
-sta_if.connect('kurs', 'kurs2024') # Kobler til wifi
+sta_if.connect('DATO IOT', 'Admin:123') # Kobler til wifi
 
 while not sta_if.isconnected(): # Venter på at tilkoblingen er klar
     time.sleep(1)
@@ -27,10 +27,10 @@ print('\nNettverks konfigurasjon', sta_if.ifconfig()) # Printer nettverkskonfigu
 
 
 # Koordinater for ønsket lokasjon (En kan finne koordinater ved å høyreklikke i Google Maps)
-latitude = 59.2102183365655
-longitude = 9.603447767110834
+latitude = 59.17298489781855
+longitude = 9.61778918509681
 
-# 59.20988308342987, 9.603550339208436
+# 59.17298489781855, 9.61778918509681
 
 headers = {'User-Agent': 'Bydelshuset kurs tom.oyvnd.hogstad@gmail.com'} # met.no krever at en identifiserer seg
 # Bruker en "f-string" eller "format string". Det er en enkel måte å få variabler til å bli en del av en tekst

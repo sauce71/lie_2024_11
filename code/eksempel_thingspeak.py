@@ -10,18 +10,20 @@ from machine import WDT
 
 
 HTTP_HEADERS = {'Content-Type': 'application/json'}
-THINGSPEAK_WRITE_API_KEY = 'AUVPR1A986JMJ1AQ' # HER MÅ DERE BRUKE EGEN!!!
+THINGSPEAK_WRITE_API_KEY = 'ZYZXS2CAZCAVEMI6' # HER MÅ DERE BRUKE EGEN!!!
 THINGSPEAK_WRITE_URL = f'http://api.thingspeak.com/update?api_key={THINGSPEAK_WRITE_API_KEY}'
 
 
 # Kobler til nett
-SSID = 'kurs'
-PASSWORD = 'kurs2024'
+SSID = 'DATO IOT'
+PASSWORD = 'Admin:123'
 
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
 sta_if.connect(SSID, PASSWORD) # Kobler til wifi
-while not sta_if.isconnected(): time.sleep(1)
+while not sta_if.isconnected():
+    print('Venter ..')
+    time.sleep(1)
 print('\nNettverks konfigurasjon', sta_if.ifconfig()) # Printer nettverkskonfigurasjon
 
 # Setter opp i2c med en frekvens på 10khz
