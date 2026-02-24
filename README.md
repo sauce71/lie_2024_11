@@ -14,7 +14,7 @@ Kursholder: Tom Øyvind Hogstad (915 67 370) - tom.oyvind.hogstad@gmail.com
 
 
 ### Dokumentasjon
-[Get Started with MicroPython on Raspberry Pi Pico](https://hackspace.raspberrypi.com/books/micropython-pico) (PDF Bok)
+[Get Started with MicroPython on Raspberry Pi Pico](https://github.com/raspberrypipress/released-pdfs/blob/main/get-started-with-micropython-raspberry-pi-pico.pdf) (PDF Bok)
 
 [Micropython  - Quick reference for the Raspberry Pi Pico](https://docs.micropython.org/en/latest/rp2/quickref.html)
 
